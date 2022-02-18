@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+}
+
+body p {
+    font-size: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    margin: 30px;
+}
+
+nav{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a{
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    /*margin-right: 30px;*/
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.356);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2px;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 4px;
+}
+
+
+.intro{
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    text-align: right;
+    align-content: center;
+}
+
+.detalhe {
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: red;
+    display: inline-block;
+    justify-self: end;
+    top: 30px;
+    right: -30px;
+}
+
+.intro h2{
+    font-size: 2em;
+}
+
+.vermais{
+    align-self: center;
+    justify-self: end;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.356);
+}
+
+main img{
+    max-width: 100%;
+}
+
+.titg{
+    font-size: 64px;
+    color: #c6c6c6;
+    background-color: #f7f7f7;
+    text-align: right;
+    align-self: center;
+    padding: 20px;
+}
+
+.info{
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    text-align: left;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(6, auto);
+}
+
+.eletrica{
+    justify-self: end;
+    align-self: center;
+}
+
+.velocidade {
+    grid-column: 1;
+    justify-self: end;
+    align-self: center;
+}
+
+.rastreador {
+    grid-column: 1;
+    justify-self: end;
+    align-self: center;
+}
+
+.descricao{
+    grid-column: 2;
+}
+
+footer p{
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    margin-top: 30px;
+}
+
