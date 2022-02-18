@@ -9,7 +9,7 @@ body{
 }
 
 body p {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 header {
@@ -20,7 +20,8 @@ header img {
     margin: 30px;
 }
 
-nav{
+ul{
+    list-style: none;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -36,8 +37,13 @@ nav a{
     text-decoration: none;
     background-color: white;
     padding: 10px 15px;
+    border: 2px solid #f7f7f7;
     border-radius: 4px;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.356);
+}
+
+nav a:hover{
+    border: 2px solid red;
 }
 
 .grid{
@@ -53,26 +59,25 @@ nav a{
 .intro{
     position: relative;
     background-color: white;
-    padding: 20px;
+    padding: 40px;
     display: grid;
     gap: 20px;
     text-align: right;
     align-content: center;
 }
 
-.detalhe {
+.intro h2{
+    font-size: 2rem;
+}
+
+.intro h2:after{
+    content: "";
     position: absolute;
+    top: 30px;
+    right: -30px;
     width: 60px;
     height: 4px;
     background-color: red;
-    display: inline-block;
-    justify-self: end;
-    top: 30px;
-    right: -30px;
-}
-
-.intro h2{
-    font-size: 2em;
 }
 
 .vermais{
@@ -86,17 +91,27 @@ nav a{
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.356);
 }
 
-main img{
+.vermais:hover{
+    background-color: #900;
+}
+
+img.bike{
     max-width: 100%;
 }
 
 .titg{
-    font-size: 64px;
+    font-size: 4rem;
     color: #c6c6c6;
     background-color: #f7f7f7;
+    background-image: url('img/onda.svg');
     text-align: right;
     align-self: center;
-    padding: 20px;
+    padding: 40px;
+}
+
+.conteiner-info{
+    padding: 40px;
+    background-color: white;
 }
 
 .info{
@@ -106,7 +121,15 @@ main img{
     gap: 10px;
     text-align: left;
     grid-template-columns: auto 1fr;
-    grid-template-rows: repeat(6, auto);
+    border: blue;
+}
+
+.info:nth-child(odd){
+    background-color: #f7f7f7;
+}
+
+.info:hover{
+    border-left: 4px solid red;
 }
 
 .eletrica{
