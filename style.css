@@ -97,6 +97,9 @@ nav a:hover{
 
 img.bike{
     max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .titg{
@@ -161,3 +164,49 @@ footer p{
     margin-top: 30px;
 }
 
+@media (max-width: 800px) {
+    
+    .intro{
+        padding: 20px;
+    }
+
+    .titg{
+       grid-column: 1 / -1;
+       text-align: center;
+       padding: 20px;
+       font-size: 3rem;
+    }
+
+    .conteiner-info{
+        grid-column: 1 / -1;
+        padding: 20px;
+    }
+
+    .intro h2:after{
+        top: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .intro h2:after{
+        display: none;
+    }
+
+    .intro{
+        text-align: left;
+    }
+
+    .vermais{
+        justify-self: start;
+    }
+}
+
+@media (max-width: 400px) {
+    .titg{
+        font-size: 2.5rem;
+    }
+}
