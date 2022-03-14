@@ -3,9 +3,31 @@
     padding: 0;
 }
 
+:root{
+    --cor-primaria: red;
+    --cor-primaria-escura: #900;
+    --cor-01: #f7f7f7;
+    --cor-02: white;
+    --cor-texto: black;
+    --cor-titg: rgba(0, 0, 0, 0.2);
+    --onda: url("img/onda-clara.svg");
+}
+
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --cor-01: #111;
+        --cor-02: black;
+        --cor-texto: white;
+        --cor-titg: rgba(245, 245, 245, 0.2);
+        --onda: url("img/onda-escura.svg");
+    }    
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f7;
+    background-color: var(--cor-01);
+    color: var(--cor-texto);
 }
 
 body p {
@@ -16,13 +38,13 @@ header {
     text-align: center;
 }
 
-header img {
-    margin: 30px;
+.marca {
+    margin: 50px;
 }
 
 ul{
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -30,20 +52,17 @@ ul{
 }
 
 nav a{
-    /*display: inline-block;*/
-    /*text-align: center;*/
-    /*margin-right: 30px;*/
-    color: black;
+    color: var(--cor-texto);
     text-decoration: none;
-    background-color: white;
+    background-color: var(--cor-02);
     padding: 10px 15px;
-    border: 2px solid #f7f7f7;
+    border: 2px solid var(--cor-02);
     border-radius: 4px;
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.356);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.171);
 }
 
 nav a:hover{
-    border: 2px solid red;
+    border-color: var(--cor-primaria);
 }
 
 .grid{
@@ -55,10 +74,9 @@ nav a:hover{
     border-radius: 4px;
 }
 
-
 .intro{
     position: relative;
-    background-color: white;
+    background-color: var(--cor-02);
     padding: 40px;
     display: grid;
     gap: 20px;
@@ -73,17 +91,16 @@ nav a:hover{
 .intro h2:after{
     content: "";
     position: absolute;
-    top: 30px;
-    right: -30px;
     width: 60px;
     height: 4px;
-    background-color: red;
+    top: 30px;
+    right: -30px;
+    background-color: var(--cor-primaria);
 }
 
 .vermais{
-    align-self: center;
     justify-self: end;
-    background-color: red;
+    background-color: var(--cor-primaria);
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -92,7 +109,7 @@ nav a:hover{
 }
 
 .vermais:hover{
-    background-color: #900;
+    background-color: var(--cor-primaria-escura);
 }
 
 img.bike{
@@ -104,9 +121,9 @@ img.bike{
 
 .titg{
     font-size: 4rem;
-    color: #c6c6c6;
-    background-color: #f7f7f7;
-    background-image: url('img/onda.svg');
+    color: var(--cor-titg);
+    background-color: var(--cor-01);
+    background-image: var(--onda);
     text-align: right;
     align-self: center;
     padding: 40px;
@@ -114,25 +131,28 @@ img.bike{
 
 .conteiner-info{
     padding: 40px;
-    background-color: white;
+    background-color: var(--cor-02);
 }
 
 .info{
-    background-color: white;
     padding: 20px;
     display: grid;
     gap: 10px;
     text-align: left;
     grid-template-columns: auto 1fr;
-    border: blue;
+    border-left: 4px solid var(--cor-02);
+}
+
+.info p, h3{
+    font-size: 1.15rem;
 }
 
 .info:nth-child(odd){
-    background-color: #f7f7f7;
+    background-color: var(--cor-01);
 }
 
 .info:hover{
-    border-left: 4px solid red;
+    border-left: 4px solid var(--cor-primaria);
 }
 
 .eletrica{
@@ -157,11 +177,11 @@ img.bike{
 }
 
 footer p{
-    font-size: 1em;
+    font-size: 1rem;
     text-align: center;
     padding: 10px;
-    background-color: white;
-    margin-top: 30px;
+    background-color: var(--cor-02);
+    margin-top: 50px;
 }
 
 @media (max-width: 800px) {
@@ -190,6 +210,10 @@ footer p{
 @media (max-width: 600px) {
     .grid{
         grid-template-columns: 1fr;
+    }
+
+    header ul{
+        margin-bottom: 30px;
     }
 
     .intro h2:after{
